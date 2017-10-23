@@ -1,0 +1,254 @@
+/* Body style*/
+*{
+  font-family: 'Roboto',sans-serif;
+  font-size: 15px;
+
+}
+span{font-size: inherit;font-family: inherit;}
+
+
+/* Text styling */
+@font-face{
+  font-family: 'Neoteric';
+  src: url('../fonts/neoteric_regular.ttf');
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+/* Margins,padding*/
+.no-margin{
+  margin:0 !important;
+}
+.no-margin-top{
+  margin-top:0 !important;
+}
+
+.no-padding{
+  padding: 0 !important;
+}
+
+/* Section, Banner*/
+.section{
+  margin-top: 20px;
+  height: auto;
+}
+.section .title,.banner .title{
+  font-family: 'Neoteric' !important;
+}
+
+.section .title{
+  text-transform: uppercase;
+  text-align: center;
+  color:#424242;
+  font-size: 2rem;
+  position: relative;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.divider-section{
+  background-color: #eeeeee;
+  padding: 15px;
+  color:#424242;
+}
+
+.section .title.left{
+  text-align: left;
+}
+
+.section .title:not(.no-underline):after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left:calc(50% - 13px);
+  width: 26px;
+  height: 1px;
+  border-bottom: 4px solid #f55;
+}
+.section .title.left:not(.no-underline):after{
+  left: 0;
+}
+
+.section .content{
+  margin-top: 20px;
+}
+
+/* Particles section*/
+.section.particles{
+  height: 515px;
+}
+
+.section.particles #particles-js{
+  height: inherit;
+}
+
+.particles-text-wrapper{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-top: 16%;
+}
+
+@media only screen and (max-width: 992px){
+  .section.particles{
+    height: auto;
+  }
+}
+
+/* Owl carousel*/
+#recent-events .owl-carousel .card .card-content{
+  padding: 15px;
+  text-align: center;
+}
+#recent-events .owl-carousel .card .card-content .card-title{
+  font-size: 19px;
+}
+
+#recent-events .owl-carousel .owl-item img{
+  height: 220px;
+}
+
+.owl-theme .owl-nav [class*=owl-]{
+  width: 27px;
+  border-radius: 50%;
+
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover{
+  background-color: #f55;
+}
+
+/* Materialize editing */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+@media only screen and (min-width: 993px){
+  .container{
+    width: 85%;
+  }
+}
+
+
+
+
+
+
+.primary-text{
+  color: #f55;
+}
+
+
+.no-box-shadow{
+  box-shadow: none;
+}
+
+.nav-wrapper{
+  padding:0 15px;
+}
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+nav .brand-logo{
+  font-family: 'Neoteric';
+  font-weight: bold;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+.background-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+nav ul:not(.side-nav) a{
+  height: 64px;
+  border-bottom: 4px solid #fff;
+  transition: all .2s;
+}
+nav ul:not(.side-nav) a:hover,nav ul:not(.side-nav) a.active{
+  background:#fff;
+  border-bottom: 4px solid #f55;
+}
+
+.carousel{
+  height: calc(100vh - 64px) !important;
+}
+.carousel .carousel-text{
+  position: absolute;
+  top: 35%;
+  left: 1.8%;
+  right: auto;
+  width: 96.6666666%;
+}
+
+.carousel-text .carousel-title{
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.carousel-text .carousel-small-text{
+  text-align: center;
+  margin-top: 0;
+}
+
+
+.banner-logo{
+  width: 100px;
+}
+
+
+.particles-section{
+  height: calc(100vh - 64px);
+  position: relative;
+}
