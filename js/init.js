@@ -10,14 +10,15 @@ $(document).ready(function(){
 	*/
 
 	$.ajax({
-		url:"assets/recent-events.json",
+		url:"assets/team.json",
 		type:"GET",
 		success:function(data){
-			var container = $("#recent-events .owl-carousel");
-			$.each(data,function(i,event){
-				var template = $(".templates .owl-carousel .item").clone();
-				template.find(".card-title").html(event['title']);
-				template.find("img").attr('src',event['img']);
+			var container = $("#team .owl-carousel");
+			$.each(data,function(i,profile){
+				var template = $(".templates .profiles-template .item").clone();
+				template.find(".profile-title").html(profile['name']);
+				template.find(".profile-sub-title").html(profile['title']);
+				template.find(".profile .hexagon").css('background-image',"url('"+profile['img']+"')");
 				container.append(template);
 			});			
 			container.owlCarousel({
@@ -41,7 +42,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$.ajax({
+	/*$.ajax({
 		url:'assets/team.json',
 		type:'GET',
 		success:function(data){
@@ -60,5 +61,5 @@ $(document).ready(function(){
 				container.find(".row").last().append(template);
 			});
 		}
-	});
+	});*/
 });
