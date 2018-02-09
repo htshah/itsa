@@ -1,5 +1,7 @@
 <?php
-	$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');
+	/*$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');*/
+	$eventsFile = file_get_contents(__DIR__.'/assets/events.json');
+	curl_close($ch);
 	$events = json_decode($eventsFile,true);
 
 ?>
