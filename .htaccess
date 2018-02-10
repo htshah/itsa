@@ -16,3 +16,9 @@ ExpiresByType image/x-icon "access 1 year"
 ExpiresDefault "access 1 month"
 </IfModule>
 ## EXPIRES CACHING ##
+
+<IfModule mod_headers.c>
+	<FilesMatch ".(js|css|xml|gz|html)$">
+		Header append Vary: Accept-Encoding
+	</FilesMatch>
+</IfModule>
