@@ -1,5 +1,7 @@
 <?php
-	$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');
+	/*$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');*/
+	$eventsFile = file_get_contents(__DIR__.'/assets/events.json');
+	curl_close($ch);
 	$events = json_decode($eventsFile,true);
 
 ?>
@@ -408,7 +410,7 @@
 					<span class="title" style="text-align: right;padding-right: 2.3rem;">ITSA</span>
 				</div>
 				<div class="col s6 left-align">
-					<a href="http://sfitengg.com"><img class="img-responsive" src="img/logo-sfit.jpg"></a>
+					<a href="http://sfitengg.org"><img class="img-responsive" src="img/logo-sfit.jpg"></a>
 					<span class="title left-align" style="padding-left: 2.8rem;">SFIT</span>
 				</div>
 			</div>
