@@ -17,13 +17,13 @@
 
 	<!-- CSS  -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<!-- <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.theme.green.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/timeline-horizontal.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/hexagon-box.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	
+	<link href="css/hexagon-box.min.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+	<link rel="stylesheet" type="text/css" href="css/bundle.css">
 
 	<!-- Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
