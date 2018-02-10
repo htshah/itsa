@@ -1,7 +1,6 @@
 <?php
 	/*$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');*/
-	$eventsFile = file_get_contents(__DIR__.'/assets/events.json');
-	curl_close($ch);
+	$eventsFile = file_get_contents(__DIR__.'/assets/events.min.json');
 	$events = json_decode($eventsFile,true);
 
 ?>
@@ -12,224 +11,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>ITSA | Information Technology Students' Association</title>
 
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 	<!-- CSS  -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.theme.green.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/timeline-horizontal.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<style type="text/css">
-		
-	</style>
-	<style type="text/css">
-		.splash{
-			width: 100%;
-			min-height:500px;
-			overflow: hidden;
-
-			background: #f44336;
-			background: -moz-linear-gradient(-45deg, #f44336 0%, #f50057 99%);
-			background: -webkit-linear-gradient(-45deg, #f44336 0%,#f50057 99%);
-			background: linear-gradient(135deg, #f44336 0%,#f50057 99%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44336', endColorstr='#f50057',GradientType=1 );
-		}
-		.splash .splash-title{
-			font-size: 13rem;
-			font-weight: 100;
-			line-height: 13rem;
-			margin-bottom: 20px;
-			display: inline-block;
-		}
-		.splash .splash-text{
-			padding: 0 15px;
-			line-height: 1.5rem;
-		}
-		.splash .splash-title,.splash .splash-text{
-			color:#fff;
-		}
-	</style>
-	<style type="text/css">
-		.cd-horizontal-timeline ol li{
-			list-style-type: none;
-		}
-		.cd-horizontal-timeline .events-content{
-			max-width: 800px;
-			margin: 2em auto;
-		}
-		.cd-horizontal-timeline .events-content ol{
-			margin-top: 0;
-			padding-left: 0;
-		}
-		.cd-horizontal-timeline .events-content ol li .timeline-title{
-			color: #f50b52 !important;
-    		font-size: 1.5rem !important;
-    		margin: 20px 0 !important;
-		}
-
-		.cd-horizontal-timeline .events-content ol li .timeline-text{
-			font-size: 1.1rem !important;
-		    font-weight: 400;
-		    text-align: justify;
-		}
-		.cd-horizontal-timeline .filling-line{
-			background-color: #f50057;
-		}
-		.cd-horizontal-timeline .events a.older-event::after{
-			border-color: #f50057;
-		}
-		.cd-horizontal-timeline .events a.selected::after{
-			background-color: #f50057;
-			border-color: #f50057;
-		}
-		.no-touch .cd-horizontal-timeline .events a:hover::after{
-			background-color: #f50057;
-			border-color: #f50057;
-		}
-		.no-touch .cd-timeline-navigation a:hover{
-			border-color: #f50057;	
-		}
-		.cd-horizontal-timeline .events a{
-			font-size: 0.8rem;
-		}
-		.cd-horizontal-timeline .timeline-img{
-			border-radius: 10px;
-			width: 100%;
-			height: auto;
-		}
-	</style>
-	<style type="text/css">
-		.diagonal-box{
-			height: 300px;
-			padding-right: 100px !important;
-			position: relative;
-		}
-		.diagonal-box:before{
-			content: '';
-			position: absolute;
-			top: 0;
-			left: -500%;
-			height: 100%;
-			width:500%;
-		}
-		.diagonal-box.deep-purple.custom-color:before{
-			background: #7c2aee !important;
-		}
-		.diagonal-box.red.accent-3:before{
-			background: #FF1744 !important;
-		}
-		.diagonal-box:after{
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			border-bottom: 300px solid #fff;
-			border-left: 100px solid transparent;
-			width: 0;
-			height: 100%;
-		}
-	</style>
-	<style type="text/css">
-		.objectives-icon{
-			text-align: center;
-			width: 90px;
-		}
-		.objectives-text{
-			text-align: center;
-		}
-	</style>
-	<style type="text/css">
-		.hexagon {
-			position: relative;
-			width: 200px; 
-			height: 115.47px;
-			margin: 57.74px auto;
-			background-image: url(http://csshexagon.com/img/meow.jpg);
-			background-size: auto 212.4649px;
-			background-position: center;
-			box-shadow: 0 0 15px rgba(0,0,0,0.6);
-			border-left: solid 8px #f44336;
-			border-right: solid 8px #f44336;
-		}
-
-		.hexTop,
-		.hexBottom {
-			position: absolute;
-			z-index: 1;
-			width: 141.42px;
-			height: 141.42px;
-			overflow: hidden;
-			-webkit-transform: scaleY(0.5774) rotate(-45deg);
-			-ms-transform: scaleY(0.5774) rotate(-45deg);
-			transform: scaleY(0.5774) rotate(-45deg);
-			background: inherit;
-			left: 21.29px;
-			box-shadow: 0 0 15px rgba(0,0,0,0.6);
-		}
-
-		/*counter transform the bg image on the caps*/
-		.hexTop:after,
-		.hexBottom:after {
-			content: "";
-			position: absolute;
-			width: 184.0000px;
-			height: 106.23244953089116px;
-			-webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-53.1162px);
-			-ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-53.1162px);
-			transform:          rotate(45deg) scaleY(1.7321) translateY(-53.1162px);
-			-webkit-transform-origin: 0 0;
-			-ms-transform-origin: 0 0;
-			transform-origin: 0 0;
-			background: inherit;
-		}
-
-		.hexTop {
-			top: -70.7107px;
-			border-top: solid 11.3137px #f44336;
-			border-right: solid 11.3137px #f44336;
-		}
-
-		.hexTop:after {
-			background-position: center top;
-		}
-
-		.hexBottom {
-			bottom: -70.7107px;
-			border-bottom: solid 11.3137px #f44336;
-			border-left: solid 11.3137px #f44336;
-		}
-
-		.hexBottom:after {
-			background-position: center bottom;
-		}
-
-		.hexagon:after {
-			content: "";
-			position: absolute;
-			top: 4.6188px;
-			left: 0;
-			width: 184.0000px;
-			height: 106.2324px;
-			z-index: 2;
-			background: inherit;
-		}
-	</style>
-	<style type="text/css">
-		.profile .profile-title{
-		    font-size: 1.3rem;
-		    font-weight: bold;
-		    width: 100%;
-		    display: block;
-		    text-align: center;
-		    padding: 6px 0 0 0;
-		}
-		.profile .profile-sub-title{
-			text-align: center;
-		    display: block;
-		    width: 100%;
-		}
-	</style>
-
+	<link href="css/timeline-horizontal.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/hexagon-box.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	
 
 	<!-- Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -351,19 +145,19 @@
 					<span class="sub-title yellow-text text-lighten-4">What we try to achieve?</span>
 					<p>Our objective is to help students improve their knowledge &amp; skills.</p>
 				</div>
-				<div class="col s12 m6 l2 center-align">
+				<div class="col s6 l2 center-align">
 					<img class="objectives-icon" src="img/gears.svg">
 					<p class="objectives-text">Technical Skills</p>
 				</div>
-				<div class="col s12 m6 l2 center-align">
+				<div class="col s6 l2 center-align">
 					<img class="objectives-icon" src="img/workshop.svg">
 					<p class="objectives-text">Workshops</p>
 				</div>
-				<div class="col s12 m6 l2 center-align">
+				<div class="col s6 l2 center-align">
 					<img class="objectives-icon" src="img/megaphone.svg">
 					<p class="objectives-text">Seminars</p>
 				</div>
-				<div class="col s12 m6 l2 center-align">
+				<div class="col s6 l2 center-align">
 					<img class="objectives-icon" src="img/paper-presentation.svg">
 					<p class="objectives-text">Technical paper</p>
 				</div>
@@ -453,8 +247,8 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/modernizr.js"></script>
-	<script src="js/timeline-horizontal.js"></script>
-	<script src="js/init.js"></script>
+	<script src="js/timeline-horizontal.min.js"></script>
+	<script src="js/init.min.js"></script>
 	
 </body>
 </html>

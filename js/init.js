@@ -10,7 +10,7 @@ $(document).ready(function(){
 	*/
 
 	$.ajax({
-		url:"assets/team.json",
+		url:"assets/team.min.json",
 		type:"GET",
 		success:function(data){
 			var container = $("#team .owl-carousel");
