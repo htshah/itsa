@@ -227,6 +227,19 @@
 		    width: 100%;
 		}
 	</style>
+
+
+	<!-- Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926609-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-113926609-1');
+	</script>
+
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
@@ -440,7 +453,6 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/timeline-horizontal.js"></script>
 	<script src="js/init.js"></script>
-	<script type="text/javascript">
-	</script>
+	
 </body>
 </html>
