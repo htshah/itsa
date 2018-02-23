@@ -35,7 +35,17 @@
 
 		gtag('config', 'UA-113926609-1');
 	</script>
-
+	<style>
+		audio, video {
+		    display: block;
+		    vertical-align: baseline;
+		    margin: 20px auto;
+		}
+		video{
+			width: 100%;
+			height:auto;
+		}
+	</style>
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
