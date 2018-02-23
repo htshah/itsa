@@ -112,7 +112,7 @@
 		    margin: 150px;
 		    -ms-transform: scale(2,3); /* IE 9 */
 		    -webkit-transform: scale(2,3); /* Safari */
-		    transform: scale(2,3); /* Standard syntax */
+		    transform: scale(1,3); /* Standard syntax */
 		}
 
 		.without-transform-origin {
