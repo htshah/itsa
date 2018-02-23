@@ -46,6 +46,36 @@
 			height:auto;
 		}
 	</style>
+	
+	<!-- Animation -->
+	<style>
+		.animate-div {
+			display:block;
+			margin:0 auto;
+			width: 100px;
+			height: 100px;
+			font-weight: bolder;
+			font-size: 30px;
+			background-color: #f44336;
+			-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+			-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+			animation-name: example;
+			animation-duration: 4s;
+			-webkit-animation-iteration-count: infinite;
+			-moz-animation-iteration-count: infinite;
+			-o-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+
+		/* Standard syntax */
+		@keyframes example {
+		    0%   {background-color: red;}
+		    25%  {background-color: orange;
+		     -webkit-transform: translate(50px,0); }
+		    50%  {background-color: blue;}
+		    100% {background-color: green;}
+		}
+	</style>
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
@@ -132,13 +162,11 @@
 	<div id="team" class="section">
 		<div class="container">
 
-			<div class="title">Team</div>
-			<div class="sub-title">Meet people behind this committee.</div>
-			<div class="row team-container">
+			<div class="title">CSS3 Animation</div>
+			<div class="sub-title">A small demo for animation</div>
+			<div class="row">
 				<div class="col s12">
-					<div class="owl-carousel owl-theme">
-						
-					</div>
+					<div class="animate-div"></div>
 				</div>
 				
 			</div>
