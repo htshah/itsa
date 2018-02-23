@@ -82,86 +82,37 @@
 		</div>
 	</div>
 
-	<div id="events" class="section">
+	<div id="video" class="section">
 		<div class="container">
 			<div class="row">
 				<div class="col s12">
-					<span class="title">Events</span>
-					<span class="sub-title">Our Events for this year.</span>
+					<span class="title">Video</span>
+					<span class="sub-title">This video is displayed using &lt;video&gt; tag</span>
+				</div>
+				
+				<div class="col s12">
+					<video controls>
+						<source src="/assets/video/teamwork.mp4" type="video/mp4">
+						Video is not supported in your browser
+					</video>
 				</div>
 			</div>
-			<section class="cd-horizontal-timeline">
-				<div class="timeline">
-					<div class="events-wrapper">
-						<div class="events">
-							<ol>
-								<?php foreach($events as $key => $event){
-									$date = str_replace('-', '/', $event['date']);
-									$dateStr = date("dS M", strtotime($event['date']));
-								?>
-									<li><a href="#0" class="<?=$key==0?"selected":"";?>"  data-date="<?=$date;?>"><?=$dateStr;?></a></li>
-								<?php }?>
-							</ol>
-
-							<span class="filling-line" aria-hidden="true"></span>
-						</div> <!-- .events -->
-					</div> <!-- .events-wrapper -->
-
-					<ul class="cd-timeline-navigation">
-						<li><a href="#0" class="prev inactive">Prev</a></li>
-						<li><a href="#0" class="next">Next</a></li>
-					</ul> <!-- .cd-timeline-navigation -->
-				</div> <!-- .timeline -->
-
-				<div class="events-content">
-					<ol>
-
-						<?php foreach($events as $key=>$event){
-							$isArray = gettype($event['date']) === 'array';
-
-							$date = str_replace('-', '/', $event['date']);
-							//$dateStr;
-						?>
-							<li class="<?=$key==0?"selected":"";?>" data-date="<?=$date;?>">
-								<img class="timeline-img z-depth-3" src="img/material-scenery.jpg">
-								<p class="timeline-title"><?=$event['events'][0]['title'];?></p>
-								<p class="timeline-text">	
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-								</p>
-							</li>
-						<?php }?>
-
-						<!-- other descriptions here -->
-					</ol>
-				</div> <!-- .events-content -->
-			</section>
 		</div>
 	</div>
 
 
-	<div id="objectives" class="section divider-section small-section white-text deep-purple custom-color">
+	<div id="audio" class="section divider-section small-section white-text deep-purple custom-color">
 		<div class="container">
 			<div class="row">
-				<div class="col s12 l4">
-					<span class="title white-text">Objectives</span>
-					<span class="sub-title yellow-text text-lighten-4">What we try to achieve?</span>
-					<p>Our objective is to help students improve their knowledge &amp; skills.</p>
+				<div class="col s12">
+					<span class="title white-text">Audio</span>
+					<span class="sub-title yellow-text text-lighten-4">Listen to some classics</span>
 				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/gears.svg">
-					<p class="objectives-text">Technical Skills</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/workshop.svg">
-					<p class="objectives-text">Workshops</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/megaphone.svg">
-					<p class="objectives-text">Seminars</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/paper-presentation.svg">
-					<p class="objectives-text">Technical paper</p>
+				<div class="col s12 center-align">
+					<audio controls>
+						<source src="audio.mp3" type="audio/mpeg">
+						Your browser does not support the audio tag.
+					</audio>
 				</div>
 			</div>
 		</div>
