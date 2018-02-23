@@ -50,6 +50,7 @@
 					<li><a href="#objectives">Objectives</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="/practicals.php">Practicals</a></li>
 				</ul>
 
 				<ul id="nav-mobile" class="left side-nav">
