@@ -110,7 +110,7 @@
 				</div>
 				<div class="col s12 center-align">
 					<audio controls>
-						<source src="audio.mp3" type="audio/mpeg">
+						<source src="/assets/audio/audio.mp3" type="audio/mpeg">
 						Your browser does not support the audio tag.
 					</audio>
 				</div>
