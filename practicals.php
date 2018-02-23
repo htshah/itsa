@@ -159,7 +159,7 @@
 	</div>
 
 
-	<div id="team" class="section">
+	<div id="animation" class="section">
 		<div class="container">
 
 			<div class="title">CSS3 Animation</div>
