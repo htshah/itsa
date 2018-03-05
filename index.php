@@ -97,7 +97,7 @@
 									$date = str_replace('-', '/', $event['date']);
 									$dateStr = date("dS M", strtotime($event['date']));
 								?>
-									<li><a href="#0" class="<?=$key==0?"selected":"";?>"  data-date="<?=$date;?>"><?=$dateStr;?></a></li>
+									<li><a href="#0" class="<?=isset($event['selected'])?"selected":"";?>"  data-date="<?=$date;?>"><?=$dateStr;?></a></li>
 								<?php }?>
 							</ol>
 
@@ -120,11 +120,12 @@
 							$date = str_replace('-', '/', $event['date']);
 							//$dateStr;
 						?>
-							<li class="<?=$key==0?"selected":"";?>" data-date="<?=$date;?>">
-								<img class="timeline-img z-depth-3" src="img/material-scenery.jpg">
+							<li class="<?=isset($event['selected'])?"selected":"";?>" data-date="<?=$date;?>">
+								<img class="timeline-img z-depth-3" src="<?=$event['events'][0]['img'];?>">
 								<p class="timeline-title"><?=$event['events'][0]['title'];?></p>
+								
 								<p class="timeline-text">	
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+									<?=$event['events'][0]['text'];?>	
 								</p>
 							</li>
 						<?php }?>
