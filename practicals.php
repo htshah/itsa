@@ -270,7 +270,7 @@
 				<div class="col s12 l4">
 					<div class="original-div">Original</div>
 				</div>
-				<div class="col s12 l4">
+				<!--<div class="col s12 l4">
 					<div class="original-div translated-div">Translation</div>
 				</div>
 				<div class="col s12 l4">
@@ -290,8 +290,20 @@
 				</div>
 				<div class="col s12 l4">
 					<div class="original-div with-transform-origin">Transform Origin</div>
-				</div>
+				</div>-->
 			</div>	
+			<div class="row">
+				<div class="input-field col s12">
+					<select id="transformation-select">
+						<option value="" selected>Original</option>
+						<option value="translated-div">Translation</option>
+						<option value="rotated-div">Rotation</option>
+						<option value="skew-div">Skew</option>
+						<option value="scale-div">Scaling</option>
+						<option value="matrix-div">Matrix transformation</option>
+					</select>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -348,6 +360,15 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/timeline-horizontal.min.js"></script>
 	<script src="js/init.min.js"></script>
-	
+	<script>
+	$(document).ready(function() {
+	    	$('select').material_select();
+		$('#transformation-select').change(function(){
+			newClass = $('#transformation-select :selected').val();
+			newText = $('#transformation-select :selected').attr('data-text');
+			$('.original-div').removeClass().addClass('original-div '+newClass).html(newText);
+		});
+	  });
+	</script>
 </body>
 </html>
