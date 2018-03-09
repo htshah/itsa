@@ -152,13 +152,13 @@
 	</style>
 	
 	<style>
-		#red-prespective{
+		#red-perspective{
 			width:100px;
 			height:100px;
 			margin:0 auto;
 			border:1px solid #9e9e9e;
 		}
-		#red-prespective .box{
+		#red-perspective .box{
 			width:100%;
 			height:100%;
 			background-color:red;
@@ -301,7 +301,7 @@
 		</div>
 	</div>
 	
-	<div id="transformation-3d">
+	<div id="transformation-3d" class="section">
 		<div class="container">
 			<span class="title left">3D Transformation</span>
 			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
