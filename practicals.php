@@ -137,10 +137,13 @@
 	</style>
 	<style>
 		.transition-link{
-			color:white;
-			text-decoration:none;
+			color: white;
+			text-decoration: none;
 			background-color: transparent;
 			transition: all 0.5s;
+			border: 2px solid white;
+			padding: 10px 15px;
+    			border-radius: 3px;
 		}
 		.transition-link:hover{
 			color:#424242;
