@@ -151,6 +151,7 @@
   			height: 200px;	
 			transition:transform 1s;
 			margin:0 auto;
+			position:relative;
 		}
 		#card-flip figure{
 			margin: 0;
