@@ -157,12 +157,37 @@
 			height:100px;
 			margin:0 auto;
 			border:1px solid #9e9e9e;
+			perspective:300px;
 		}
 		#red-perspective .box{
 			width:100%;
 			height:100%;
 			background-color:red;
-			perspective:300px;
+			transform: rotateY(50deg);
+		}
+		
+		#card-flip{
+			width: 100px;
+  			height: 200px;	
+			transition:transform 1s;
+		}
+		#card-flip figure{
+			margin: 0;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+		#card .front {
+			background: red;
+		}
+		#card .back {
+			background: blue;
+			transform: rotateY( 180deg );
+		}
+		#card:hover {
+			transform: rotateY( 180deg );
 		}
 	</style>
 </head>
@@ -303,12 +328,27 @@
 	
 	<div id="transformation-3d" class="section">
 		<div class="container">
-			<span class="title left">3D Transformation</span>
+			<span class="title left">3D Transformation - Perspective</span>
 			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
 			<div class="row">
 				<div class="col s12">
 					<div id="red-perspective">
 						<div class="box"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="transformation-card-flip" class="section">
+		<div class="container">
+			<span class="title left">3D Transformation - Card Flip</span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
+			<div class="row">
+				<div class="col s12">
+					<div id="card-flip">
+						<figure class="front"></figure>
+						<figure class="back"></figure>
 					</div>
 				</div>
 			</div>
