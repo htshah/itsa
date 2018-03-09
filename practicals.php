@@ -135,6 +135,18 @@
 		    transform-origin: 20% 40%;
 		}
 	</style>
+	<style>
+		.transition-link{
+			color:white;
+			text-decoration:none;
+			background-color: transparent;
+			transition: all 0.5s;
+		}
+		.transition-link:hover{
+			color:#424242;
+			background-color:white;
+		}
+	</style>
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
@@ -231,12 +243,26 @@
 			</div>
 		</div>
 	</div>
-
-
-	<div id="transformation" class="section divider-section red accent-3">
+	
+	<div id="transition" class="section divider-section small-section white-text deep-purple custom-color">
 		<div class="container">
-			<span class="title left white-text">Transformation</span>
-			<span class="sub-title left yellow-text text-lighten-3">A demo on CSS3 Transformation</span>
+			<div class="row">
+				<div class="col s12">
+					<span class="title white-text">Transition</span>
+					<span class="sub-title yellow-text text-lighten-4">CSS3 transition demo</span>
+				</div>
+				<div class="col s12 center-align">
+					<a href="#" class="transition-link">Demo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="transformation" class="section">
+		<div class="container">
+			<span class="title left">Transformation</span>
+			<span class="sub-title left ">A demo on CSS3 Transformation</span>
 			<div class="row">
 				<div class="col s12 l4">
 					<div class="original-div">Original</div>
