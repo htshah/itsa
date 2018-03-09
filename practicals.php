@@ -114,26 +114,6 @@
 		    -webkit-transform: scale(2,3); /* Safari */
 		    transform: scale(1,3); /* Standard syntax */
 		}
-
-		.without-transform-origin {
-		    padding: 50px;
-		    -ms-transform: rotate(45deg); /* IE 9 */
-		    -ms-transform-origin: 20% 40%; /* IE 9 */
-		    -webkit-transform: rotate(45deg); /* Safari 3-8 */
-		    -webkit-transform-origin: 20% 40%; /* Safari 3-8 */
-		    transform: rotate(45deg);
-
-		}
-
-		.with-transform-origin {
-		    padding: 50px;
-		    -ms-transform: rotate(45deg); /* IE 9 */
-		    -ms-transform-origin: 20% 40%; /* IE 9 */
-		    -webkit-transform: rotate(45deg); /* Safari 3-8 */
-		    -webkit-transform-origin: 20% 40%; /* Safari 3-8 */
-		    transform: rotate(45deg);
-		    transform-origin: 20% 40%;
-		}
 	</style>
 	<style>
 		.transition-link{
@@ -179,14 +159,14 @@
 			height: 100%;
 			backface-visibility: hidden;
 		}
-		#card .front {
+		#card-flip .front {
 			background: red;
 		}
-		#card .back {
+		#card-flip .back {
 			background: blue;
 			transform: rotateY( 180deg );
 		}
-		#card:hover {
+		#card-flip:hover {
 			transform: rotateY( 180deg );
 		}
 	</style>
@@ -350,21 +330,6 @@
 						<figure class="front"></figure>
 						<figure class="back"></figure>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="committee-logo" class="section" style="padding: 3rem 0;">
-		<div class="container">
-			<div class="row">
-				<div class="col s6 right-align" style="border-right: 1px solid #9e9e9e;">
-					<a href="#home"><img class="img-responsive" src="img/logo.jpg"></a>
-					<span class="title" style="text-align: right;padding-right: 2.3rem;">ITSA</span>
-				</div>
-				<div class="col s6 left-align">
-					<a href="http://sfitengg.org"><img class="img-responsive" src="img/logo-sfit.jpg"></a>
-					<span class="title left-align" style="padding-left: 2.8rem;">SFIT</span>
 				</div>
 			</div>
 		</div>
