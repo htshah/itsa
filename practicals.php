@@ -108,25 +108,62 @@
 		    -webkit-transform: scale(2,3); /* Safari */
 		    transform: scale(1,3); /* Standard syntax */
 		}
-
-		.without-transform-origin {
-		    padding: 50px;
-		    -ms-transform: rotate(45deg); /* IE 9 */
-		    -ms-transform-origin: 20% 40%; /* IE 9 */
-		    -webkit-transform: rotate(45deg); /* Safari 3-8 */
-		    -webkit-transform-origin: 20% 40%; /* Safari 3-8 */
-		    transform: rotate(45deg);
-
+	</style>
+	<style>
+		.transition-link{
+			color: white;
+			text-decoration: none;
+			background-color: transparent;
+			transition: all 0.5s;
+			border: 2px solid white;
+			padding: 10px 15px;
+    			border-radius: 3px;
 		}
-
-		.with-transform-origin {
-		    padding: 50px;
-		    -ms-transform: rotate(45deg); /* IE 9 */
-		    -ms-transform-origin: 20% 40%; /* IE 9 */
-		    -webkit-transform: rotate(45deg); /* Safari 3-8 */
-		    -webkit-transform-origin: 20% 40%; /* Safari 3-8 */
-		    transform: rotate(45deg);
-		    transform-origin: 20% 40%;
+		.transition-link:hover{
+			color:#424242;
+			background-color:white;
+		}
+	</style>
+	
+	<style>
+		#red-perspective{
+			width:100px;
+			height:100px;
+			margin:0 auto;
+			border:1px solid #9e9e9e;
+			perspective:300px;
+		}
+		#red-perspective .box{
+			width:100%;
+			height:100%;
+			background-color:red;
+			transform: rotateY(50deg);
+		}
+		
+		#card-flip{
+			width: 100px;
+  			height: 200px;	
+			transition:transform 1s;
+			margin:0 auto;
+			position:relative;
+		}
+		#card-flip figure{
+			margin: 0;
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			backface-visibility: hidden;
+		}
+		#card-flip .front {
+			background: red;
+		}
+		#card-flip .back {
+			background: blue;
+			transform: rotateY( 180deg );
+		}
+		#card-flip:hover {
+			transform: rotateY( 180deg );
 		}
 	</style>
 </head>
@@ -225,51 +262,70 @@
 			</div>
 		</div>
 	</div>
-
-
-	<div id="transformation" class="section divider-section red accent-3">
+	
+	<div id="transition" class="section divider-section small-section white-text deep-purple custom-color">
 		<div class="container">
-			<span class="title left white-text">Transformation</span>
-			<span class="sub-title left yellow-text text-lighten-3">A demo on CSS3 Transformation</span>
+			<div class="row">
+				<div class="col s12">
+					<span class="title white-text">Transition</span>
+					<span class="sub-title yellow-text text-lighten-4">CSS3 transition demo</span>
+				</div>
+				<div class="col s12 center-align">
+					<a href="#" class="transition-link">Demo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div id="transformation" class="section">
+		<div class="container">
+			<span class="title left">Transformation</span>
+			<span class="sub-title left ">A demo on CSS3 Transformation</span>
 			<div class="row">
 				<div class="col s12 l4">
 					<div class="original-div">Original</div>
 				</div>
-				<div class="col s12 l4">
-					<div class="original-div translated-div">Translation</div>
-				</div>
-				<div class="col s12 l4">
-					<div class="original-div rotated-div">Rotation</div>
-				</div>
-				<div class="col s12 l4">
-					<div class="original-div matrix-div">Matrix</div>
-				</div>
-				<div class="col s12 l4">
-					<div class="original-div skew-div">Skew</div>
-				</div>
-				<div class="col s12 l4">
-					<div class="original-div scale-div">Scale</div>
-				</div>
-				<div class="col s12 l4">
-					<div class="original-div without-transform-origin">W/O Transform Origin</div>
-				</div>
-				<div class="col s12 l4">
-					<div class="original-div with-transform-origin">Transform Origin</div>
-				</div>
 			</div>	
+			<div class="row">
+				<div class="input-field col s12 l4">
+					<select id="transformation-select">
+						<option value="" selected>Original</option>
+						<option value="translated-div">Translation</option>
+						<option value="rotated-div">Rotation</option>
+						<option value="skew-div">Skew</option>
+						<option value="scale-div">Scaling</option>
+						<option value="matrix-div">Matrix transformation</option>
+					</select>
+				</div>
+			</div>
 		</div>
 	</div>
-
-	<div id="committee-logo" class="section" style="padding: 3rem 0;">
+	
+	<div id="transformation-3d" class="section">
 		<div class="container">
+			<span class="title left">3D Transformation - Perspective</span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
 			<div class="row">
-				<div class="col s6 right-align" style="border-right: 1px solid #9e9e9e;">
-					<a href="#home"><img class="img-responsive" src="img/logo.jpg"></a>
-					<span class="title" style="text-align: right;padding-right: 2.3rem;">ITSA</span>
+				<div class="col s12">
+					<div id="red-perspective">
+						<div class="box"></div>
+					</div>
 				</div>
-				<div class="col s6 left-align">
-					<a href="http://sfitengg.org"><img class="img-responsive" src="img/logo-sfit.jpg"></a>
-					<span class="title left-align" style="padding-left: 2.8rem;">SFIT</span>
+			</div>
+		</div>
+	</div>
+	
+	<div id="transformation-card-flip" class="section">
+		<div class="container">
+			<span class="title left">3D Transformation - Card Flip</span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
+			<div class="row">
+				<div class="col s12">
+					<div id="card-flip">
+						<figure class="front"></figure>
+						<figure class="back"></figure>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -313,6 +369,15 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/timeline-horizontal.min.js"></script>
 	<script src="js/init.min.js"></script>
-	
+	<script>
+	$(document).ready(function() {
+	    	$('select').material_select();
+		$('#transformation-select').change(function(){
+			newClass = $('#transformation-select :selected').val();
+			newText = $('#transformation-select :selected').attr('data-text');
+			$('.original-div').removeClass().addClass('original-div '+newClass).html(newText);
+		});
+	  });
+	</script>
 </body>
 </html>
