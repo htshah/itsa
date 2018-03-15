@@ -49,7 +49,7 @@
 					<li><a href="#events">Events</a></li>
 					<li><a href="#objectives">Objectives</a></li>
 					<li><a href="#team">Team</a></li>
-					<li><a href="/practicals.php">Practicals</a></li>
+					<li><a href="practicals.php">Practicals</a></li>
 					<li><a href="#about">About</a></li>
 				</ul>
 
@@ -57,7 +57,7 @@
 					<li><a href="#home">Home</a></li>
 					<li><a href="#recent-events">Events</a></li>
 					<li><a href="#team">Team</a></li>
-					<li><a href="/practicals.php">Practicals</a></li>
+					<li><a href="practicals.php">Practicals</a></li>
 					<li><a href="#about">About</a></li>
 				</ul>
 				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text"><i class="material-icons">menu</i></a>

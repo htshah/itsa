@@ -1,9 +1,3 @@
-<?php
-	/*$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');*/
-	$eventsFile = file_get_contents(__DIR__.'/assets/events.min.json');
-	$events = json_decode($eventsFile,true);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -148,7 +142,7 @@
 					<li><a href="#events">Events</a></li>
 					<li><a href="#objectives">Objectives</a></li>
 					<li><a href="#team">Team</a></li>
-					<li><a href="/practicals.php">Practicals</a></li>
+					<li><a href="practicals.php">Practicals</a></li>
 					<li><a href="#about">About</a></li>
 				</ul>
 
