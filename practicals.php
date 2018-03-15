@@ -166,6 +166,44 @@
 			transform: rotateY( 180deg );
 		}
 	</style>
+	<style type="text/css">
+		.text-shadow{
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+
+		.my-box{
+			width:100%;
+			height: 100px;
+			display: block;
+		}
+		#linear-grad .my-box{
+			
+			background: linear-gradient(to right,#fddedc 0,#9700f5 99%)
+		}
+
+		#radial-grad .my-box{
+			background: radial-gradient(circle,#fddedc 0,#9700f5 99%);
+		}
+
+		#multiple-bg .my-box{
+			background: url(img/img_flwr.gif), url(img/paper.gif);
+			background-repeat: no-repeat,repeat;
+			background-position: right bottom,top left;
+		}
+
+		#grad-pattern .my-box{
+			background: repeating-linear-gradient(135deg,#9e9e9e,#9e9e9e 5px,transparent 5px,transparent 10px);
+		}
+
+		@font-face{
+			font-family:'Neoteric';
+			src:url('fonts/neoteric_regular.ttf');
+		}
+
+		.custom-font{
+			font-family: 'Neoteric';
+		}
+	</style>
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
@@ -330,6 +368,67 @@
 			</div>
 		</div>
 	</div>
+	<div id="text-shadow" class="section">
+		<div class="container">
+			<span class="title left">Text Shadow</span>
+			<span class="sub-title left ">A demo on CSS Text Shadow</span>
+			<div class="row">
+				<div class="col s12 center-align">
+					<h4 class="text-shadow">This is text-shadow.</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="linear-grad" class="section">
+		<div class="container">
+			<span class="title left">Linear Gradient</span>
+			<span class="sub-title left ">A demo on Linear gradient</span>
+			<div class="row">
+                <div class="col s12 my-box"></div>
+    		</div>
+		</div>
+	</div>
+	<div id="radial-grad" class="section">
+		<div class="container">
+			<span class="title left">Radial Gradient</span>
+			<span class="sub-title left ">A demo on Linear gradient</span>
+			<div class="row">
+                <div class="col s12 my-box"></div>
+    		</div>
+		</div>
+	</div>
+	<div id="multiple-bg" class="section">
+		<div class="container">
+			<span class="title left">Multiple Background</span>
+			<span class="sub-title left ">A demo on Multiple Background</span>
+			<div class="row">
+                <div class="col s12 my-box"></div>
+    		</div>
+		</div>
+	</div>
+
+	<div id="grad-pattern" class="section">
+		<div class="container">
+			<span class="title left">Background Pattern using gradient</span>
+			<span class="sub-title left ">A demo on Background Pattern using gradient</span>
+			<div class="row">
+                <div class="col s12 my-box"></div>
+    		</div>
+		</div>
+	</div>
+
+	<div id="cust-font" class="section">
+		<div class="container">
+			<span class="title left">@font-face</span>
+			<span class="sub-title left ">A demo on @font-face rule</span>
+			<div class="row">
+                <div class="col s12 center-align">
+                	<h4 class="custom-font">Typography</h4>
+                </div>
+    		</div>
+		</div>
+	</div>
+
 
 	<footer class="page-footer grey darken-4" style="padding-top: 0;">
 		<div class="footer-copyright">
@@ -343,22 +442,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<div class="templates hide">
-		<div class="profiles-template">
-			<div class="item">
-				<div class="profile">
-					<div class="hexagon">
-						<div class="hexTop"></div>
-						<div class="hexBottom">
-						</div>
-					</div>
-					<span class="profile-title"></span>
-					<span class="profile-sub-title"></span>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!--  Scripts-->
 	<script src="js/jquery-2.1.1.min.js"></script>
