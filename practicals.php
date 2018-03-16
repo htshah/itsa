@@ -484,8 +484,8 @@
 					</div>
 					<div class="row">
 						<div class="col s12 input-field">
-							<input name="city" list="cities"/>
-							<label for="city">City</label>
+							<input name="city" list="cities" placeholder="City"/>
+							
 							<datalist id="cities">
 								<option value="Mumbai"/>
 								<option value="Delhi"/>
