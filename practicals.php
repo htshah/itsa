@@ -463,15 +463,23 @@
 						<div class="col s12 input-field">
 							<input type="url" name="website" placeholder="Website"/>
 						</div>
+						
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<h5>How active are you?</h5>
+						</div>
 						<div class="col s12 input-field">
 							<input type="range" name="range-input" min="1" max="10" value="5"/>
-							<label for="range-input">How active are you?</label>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col s12 input-field">
+						<div class="col s4">
+							<h5>Fav color</h5>
+						</div>
+						<div class="col s8 input-field">
 							<input type="color" name="color"/>
-							<label for="color">Fav color</label>
+							
 						</div>
 					</div>
 					<div class="row">
@@ -485,6 +493,10 @@
 								<option value="Surat"/>
 								<option value="Jaipur"/>
 							</datalist>
+						</div>
+						<div class="col s12 input-field">
+							<input type="search" name="search" >
+							<label for="search">Search something</label>
 						</div>
 					</div>
 					<div class="row">
