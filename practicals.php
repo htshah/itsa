@@ -428,6 +428,74 @@
     		</div>
 		</div>
 	</div>
+	
+	<div id="cust-font" class="section">
+		<div class="container">
+			<span class="title left">Form</span>
+			<span class="sub-title left ">A demo on all form elements with attributes</span>
+			<div class="row">
+				<form onsubmit="return false;">
+					<div class="row">
+						<div class="col s6 input-field">
+							<input type="text" name="fname" placeholder="First name" required title="Provide your first name" autofocus/>
+						</div>
+						<div class="col s6 input-field">
+							<input type="text" name="lname" placeholder="Last name" required title="Provide your last name"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s4 input-field">
+							<input type="number" name="age" placeholder="Age" required title="Provide your age" pattern="[0-9]{2}"/>
+						</div>
+						<div class="col s8 input-field">
+							<input type="date" name="bdate" placeholder="Birthdate" required title="Provide your birthday"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6 input-field">
+							<input type="email" name="email" placeholder="Email-id" required title="Provide your email-id" autocomplete="on"/>
+						</div>
+						<div class="col s6 input-field">
+							<input type="tel" name="phone" placeholder="Phone number" required title="Provide your phone number"/>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 input-field">
+							<input type="url" name="website" placeholder="Website"/>
+						</div>
+						<div class="col s12 input-field">
+							<input type="range" name="range-input" min="1" max="10" value="5"/>
+							<label for="range-input">How active are you?</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 input-field">
+							<input type="color" name="color"/>
+							<label for="color">Fav color</label>
+						</div>
+						<div class="col s12 input-field">
+							<input type="range" name="range-input" min="1" max="10" value="5"/>
+							<label for="range-input">How active are you?</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 input-field">
+							<input name="city" list="cities"/>
+							<label for="city">City</label>
+							<datalist id="city">
+								<option value="Mumbai"/>
+								<option value="Delhi"/>
+								<option value="Kolkata"/>
+								<option value="Surat"/>
+								<option value="Jaipur"/>
+							</datalist>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
 
 
 	<footer class="page-footer grey darken-4" style="padding-top: 0;">
