@@ -473,22 +473,23 @@
 							<input type="color" name="color"/>
 							<label for="color">Fav color</label>
 						</div>
-						<div class="col s12 input-field">
-							<input type="range" name="range-input" min="1" max="10" value="5"/>
-							<label for="range-input">How active are you?</label>
-						</div>
 					</div>
 					<div class="row">
 						<div class="col s12 input-field">
 							<input name="city" list="cities"/>
 							<label for="city">City</label>
-							<datalist id="city">
+							<datalist id="cities">
 								<option value="Mumbai"/>
 								<option value="Delhi"/>
 								<option value="Kolkata"/>
 								<option value="Surat"/>
 								<option value="Jaipur"/>
 							</datalist>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<input type="submit" value="Submit"/>
 						</div>
 					</div>
 				</form>
