@@ -434,7 +434,7 @@
 			<span class="title left">Form</span>
 			<span class="sub-title left ">A demo on all form elements with attributes</span>
 			<div class="row">
-				<form onsubmit="return false;">
+				<form id="my-form" onsubmit="return false;">
 					<div class="row">
 						<div class="col s6 input-field">
 							<input type="text" name="fname" placeholder="First name" required title="Provide your first name" autofocus/>
@@ -501,7 +501,7 @@
 					</div>
 					<div class="row">
 						<div class="col s12">
-							<input type="submit" value="Submit"/>
+							<input type="button" id="submit-btn" value="Submit"/>
 						</div>
 					</div>
 				</form>
@@ -540,6 +540,25 @@
 			newClass = $('#transformation-select :selected').val();
 			newText = $('#transformation-select :selected').attr('data-text');
 			$('.original-div').removeClass().addClass('original-div '+newClass).html(newText);
+		});
+
+
+		$("#submit-btn").click(function(){
+			$.ajax({
+				url:'email.php',
+				type:'GET',
+				data:$('#my-form').serializeArray(),
+				success:function(data){
+					data = $.parseJSON(data);
+
+					if(data['success']==1){
+						Materialize.toast("Email sent successfully",3000);
+						return false;
+					}
+
+					Materialize.toast("Error: "+data['message'],3000);
+				}
+			});
 		});
 	  });
 	</script>
