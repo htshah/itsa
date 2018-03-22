@@ -10,7 +10,7 @@
 	$mail = new PHPMailer;
 	//Tell PHPMailer to use SMTP
 	$mail->isSMTP();
-	$mail->SMTPDebug = 0;
+	$mail->SMTPDebug = 3;
 	$mail->Host = 'smtp.gmail.com';
 	$mail->Port = 587;
 	$mail->SMTPSecure = 'tls';
