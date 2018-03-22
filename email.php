@@ -1,5 +1,10 @@
 <?php
-	require "PHPMailer.php";
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+
+	require 'PHPMailer/src/Exception.php';
+	require 'PHPMailer/src/PHPMailer.php';
+	require 'PHPMailer/src/SMTP.php';
 
 	//Create a new PHPMailer instance
 	$mail = new PHPMailer;
@@ -10,6 +15,13 @@
 	$mail->Port = 587;
 	$mail->SMTPSecure = 'tls';
 	$mail->SMTPAuth = true;
+	$mail->SMTPOptions = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    )
+);
 	//Username to use for SMTP authentication - use full email address for gmail
 	$mail->Username = getenv('EMAIL');
 	//Password to use for SMTP authentication
@@ -28,7 +40,7 @@
 	
 	//send the message, check for errors
 	if (!$mail->send()) {
-	    die(json_encode(['success'=>0,'message'=>'Mail not sent..']));
+	    die(json_encode(['success'=>0,'message'=>'Mail not sent.. => '.$mail->ErrorInfo]));
 	} else {
 	    die(json_encode(['success'=>1]));
 	}
