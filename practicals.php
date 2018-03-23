@@ -434,7 +434,8 @@
 			<span class="title left">Form</span>
 			<span class="sub-title left ">A demo on all form elements with attributes</span>
 			<div class="row">
-				<form id="my-form" onsubmit="return false;">
+<!-- 				onsubmit="return false;" -->
+				<form id="my-form">
 					<div class="row">
 						<div class="col s6 input-field">
 							<input type="text" name="fname" placeholder="First name" required title="Provide your first name" autofocus/>
