@@ -501,7 +501,7 @@
 					</div>
 					<div class="row">
 						<div class="col s12">
-							<input type="button" id="submit-btn" value="Submit"/>
+							<input type="submit" id="submit-btn" value="Submit"/>
 						</div>
 					</div>
 				</form>
