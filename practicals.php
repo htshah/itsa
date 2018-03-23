@@ -434,8 +434,8 @@
 			<span class="title left">Form</span>
 			<span class="sub-title left ">A demo on all form elements with attributes</span>
 			<div class="row">
-<!-- 				onsubmit="return false;" -->
-				<form id="my-form">
+				
+				<form id="my-form" onsubmit="return false;">
 					<div class="row">
 						<div class="col s6 input-field">
 							<input type="text" name="fname" placeholder="First name" required title="Provide your first name" autofocus/>
@@ -502,7 +502,7 @@
 					</div>
 					<div class="row">
 						<div class="col s12">
-							<input type="submit" id="submit-btn" value="Submit"/>
+							<input type="button" id="submit-btn" value="Submit"/>
 						</div>
 					</div>
 				</form>
@@ -544,23 +544,23 @@
 		});
 
 
-// 		$("#submit-btn").click(function(){
-// 			$.ajax({
-// 				url:'email.php',
-// 				type:'GET',
-// 				data:$('#my-form').serializeArray(),
-// 				success:function(data){
-// 					data = $.parseJSON(data);
+		$("#submit-btn").click(function(){
+			$.ajax({
+				url:'email.php',
+				type:'GET',
+				data:$('#my-form').serializeArray(),
+				success:function(data){
+					data = $.parseJSON(data);
 
-// 					if(data['success']==1){
-// 						Materialize.toast("Email sent successfully",3000);
-// 						return false;
-// 					}
+					if(data['success']==1){
+						Materialize.toast("Email sent successfully",3000);
+						return false;
+					}
 
-// 					Materialize.toast("Error: "+data['message'],3000);
-// 				}
-// 			});
-// 		});
+					Materialize.toast("Error: "+data['message'],3000);
+				}
+			});
+		});
 	  });
 	</script>
 </body>
