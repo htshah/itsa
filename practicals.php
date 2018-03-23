@@ -543,23 +543,23 @@
 		});
 
 
-		$("#submit-btn").click(function(){
-			$.ajax({
-				url:'email.php',
-				type:'GET',
-				data:$('#my-form').serializeArray(),
-				success:function(data){
-					data = $.parseJSON(data);
+// 		$("#submit-btn").click(function(){
+// 			$.ajax({
+// 				url:'email.php',
+// 				type:'GET',
+// 				data:$('#my-form').serializeArray(),
+// 				success:function(data){
+// 					data = $.parseJSON(data);
 
-					if(data['success']==1){
-						Materialize.toast("Email sent successfully",3000);
-						return false;
-					}
+// 					if(data['success']==1){
+// 						Materialize.toast("Email sent successfully",3000);
+// 						return false;
+// 					}
 
-					Materialize.toast("Error: "+data['message'],3000);
-				}
-			});
-		});
+// 					Materialize.toast("Error: "+data['message'],3000);
+// 				}
+// 			});
+// 		});
 	  });
 	</script>
 </body>
