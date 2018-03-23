@@ -457,7 +457,7 @@
 							<input type="email" name="email" placeholder="Email-id" required title="Provide your email-id" autocomplete="on"/>
 						</div>
 						<div class="col s6 input-field">
-							<input type="tel" name="phone" placeholder="Phone number" required minlength="10"  title="Provide your phone number"/>
+							<input type="tel" name="phone" placeholder="Phone number" required minlength=10  title="Provide your phone number"/>
 						</div>
 					</div>
 					<div class="row">
