@@ -68,10 +68,17 @@
 	},
 	{
 		"date":"7-03-2018",
+		"events":[
+			{"title":"Seminar on Placements","img":"img/events/placement.jpeg","by":"Mrs.Nazneen Ansari",
+			"text":"A seminar on how to clear placements is going to be conducted by Mrs.Nazneen Ansari"}
+		]
+	},
+	{
+		"date":"28-03-2018",
 		"selected":"true",
 		"events":[
-			{"title":"Seminar on Placements","img":"img/material-scenery.jpg","by":"Mrs.Nazneen Ansari",
-			"text":"A seminar on how to clear placements is going to be conducted by Mrs.Nazneen Ansari"}
+			{"title":"Workshop on R programming","img":"img/events/r-programming.jpeg","by":"Mrs. Mrinmoyee Mukherjee",
+			"text":"A workshop on R programming language which is best for statistical, data analysis and machine learning was conducted by Mrs. Mrinmoyee Mukherjee"}
 		]
 	}
 ]
