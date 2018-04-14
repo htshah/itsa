@@ -15,15 +15,15 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<!-- CSS  -->
+	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	
+	<!-- CSS  -->
+	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.theme.green.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/timeline-horizontal.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	<link href="css/hexagon-box.min.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
-	<link rel="stylesheet" type="text/css" href="css/bundle.css">
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<!-- <link href="css/hexagon-box.min.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
 
 	<!-- Google Analytics -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -36,29 +36,166 @@
 		gtag('config', 'UA-113926609-1');
 	</script>
 
+	<style type="text/css">
+		.image-rounded{
+			border-radius: 10px;
+		}
+
+		.list-image{
+			width: 100%;
+			height: auto;
+		}
+
+		.list-title{
+			color: #f50b52!important;
+		    font-size: 1.5rem!important;
+		    margin: 20px 0!important;
+		}
+
+		.list-description{
+			font-size: 1.1rem!important;
+		    font-weight: 400;
+		    text-align: justify;
+		    color: #959595;
+		    line-height: 1.6;
+		}
+
+		.list-item-container{
+			border-radius: 3px;
+			max-height: 300px;
+			overflow: auto;
+		}
+		.list-item-container .list-item{
+			width: 100%;
+		    font-weight: 300;
+		    color: #424242;
+		    padding: 10px;
+		    background-color: #fff;
+			cursor: pointer;
+		    transition: all .5s;
+		}
+
+		.list-item-container .list-item:not(:last-child){
+			border-bottom: 1px solid #f5f5f5;
+		}
+
+		.list-item-container .list-item:hover{
+			background-color: #ececec;
+		}
+	</style>
+	<style type="text/css">
+		.nav-logo{
+			width: 3rem;
+		    display: inline-block;
+		    float: left;
+		    margin-top: 25px;
+		    margin-right: 12px;
+		}
+	</style>
+	<style type="text/css">
+		.owl-theme .owl-nav{
+			margin-top: 10px;
+		    position: absolute;
+		    width: 100%;
+		    z-index: 100;
+		}
+
+
+		.owl-theme .owl-nav .owl-prev{
+			float: left;
+		}
+		.owl-theme .owl-nav .owl-next{
+			float: right;
+		}
+
+		.owl-theme .owl-dots{
+			margin-top: 12px;
+		}
+
+		.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+			background: #FF1744;
+		}
+
+		#events .owl-theme .owl-nav{
+			width: calc(100% - 24px);
+			top: calc(50% - 40px);
+		}
+
+		#team .owl-theme .owl-nav{
+			top: calc(50% - 48px);
+		}
+	</style>
+	<style type="text/css">
+		#events .event-features{
+			margin-bottom: 15px;
+		}
+		#events .event-property{
+		    vertical-align: middle;
+		    display: flex;
+		    float: left;
+		    margin-right: 20px;
+		    margin-bottom: 5px;
+		    color: #4c4c4c;
+		}
+		#events .event-property i.material-icons{
+		    font-size: 1.5rem;
+		    margin-right: 5px;
+		    color: #4c4c4c;
+		}
+	</style>
+	<style type="text/css">
+		/* label color */
+		.white-form .input-field label {
+			color: #fff !important;
+		}
+		/* label focus color */
+		.white-form .input-field input:focus + label {
+			color: #fff !important;
+		}
+		/* label underline focus color */
+		.white-form .input-field input:focus,.white-form .input-field textarea:focus {
+			border-bottom: 1px solid #fff !important;
+			box-shadow: 0 1px 0 0 #fff !important;
+		}
+		/* valid color */
+		.white-form .input-field input.valid {
+			border-bottom: 1px solid #fff !important;
+			box-shadow: 0 1px 0 0 #fff !important;
+		}
+		/* invalid color */
+		.white-form .input-field input.invalid {
+			border-bottom: 1px solid #fff !important;
+			box-shadow: 0 1px 0 0 #fff !important;
+		}
+		/* icon prefix focus color */
+		.white-form .input-field .prefix.active {
+			color: #fff !important;
+		}
+	</style>
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
 		<nav class="white" role="navigation">
 			<div class="nav-wrapper container">
+				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text"><i class="material-icons">menu</i></a>
 				<a id="logo-container" href="#" class="brand-logo-text">
-					ITSA
+					<img class="nav-logo" src="img/logo.jpg"/> ITSA
 				</a>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#events">Events</a></li>
-					<li><a href="#objectives">Objectives</a></li>
-					<li><a href="#team">Team</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 
 				<ul id="nav-mobile" class="left side-nav">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#recent-events">Events</a></li>
-					<li><a href="#team">Team</a></li>
 					<li><a href="#about">About</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
-				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text"><i class="material-icons">menu</i></a>
 			</div>
 		</nav>
 	</div>
@@ -88,84 +225,74 @@
 					<span class="sub-title">Our Events for this year.</span>
 				</div>
 			</div>
-			<section class="cd-horizontal-timeline">
-				<div class="timeline">
-					<div class="events-wrapper">
-						<div class="events">
-							<ol>
-								<?php foreach($events as $key => $event){
-									$date = str_replace('-', '/', $event['date']);
-									$dateStr = date("dS M", strtotime($event['date']));
-								?>
-									<li><a href="#0" class="<?=isset($event['selected'])?"selected":"";?>"  data-date="<?=$date;?>"><?=$dateStr;?></a></li>
-								<?php }?>
-							</ol>
-
-							<span class="filling-line" aria-hidden="true"></span>
-						</div> <!-- .events -->
-					</div> <!-- .events-wrapper -->
-
-					<ul class="cd-timeline-navigation">
-						<li><a href="#0" class="prev inactive">Prev</a></li>
-						<li><a href="#0" class="next">Next</a></li>
-					</ul> <!-- .cd-timeline-navigation -->
-				</div> <!-- .timeline -->
-
-				<div class="events-content">
-					<ol>
-
-						<?php foreach($events as $key=>$event){
-							$isArray = gettype($event['date']) === 'array';
-
-							$date = str_replace('-', '/', $event['date']);
-							//$dateStr;
-						?>
-							<li class="<?=isset($event['selected'])?"selected":"";?>" data-date="<?=$date;?>">
-								<img class="timeline-img z-depth-3" src="<?=$event['events'][0]['img'];?>">
-								<p class="timeline-title"><?=$event['events'][0]['title'];?></p>
-								
-								<p class="timeline-text">	
-									<?=$event['events'][0]['text'];?>	
-								</p>
-							</li>
-						<?php }?>
-
-						<!-- other descriptions here -->
-					</ol>
-				</div> <!-- .events-content -->
-			</section>
-		</div>
-	</div>
-
-
-	<div id="objectives" class="section divider-section small-section white-text deep-purple custom-color">
-		<div class="container">
 			<div class="row">
-				<div class="col s12 l4">
-					<span class="title white-text">Objectives</span>
-					<span class="sub-title yellow-text text-lighten-4">What we try to achieve?</span>
-					<p>Our objective is to help students improve their knowledge &amp; skills.</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/gears.svg">
-					<p class="objectives-text">Technical Skills</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/workshop.svg">
-					<p class="objectives-text">Workshops</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/megaphone.svg">
-					<p class="objectives-text">Seminars</p>
-				</div>
-				<div class="col s6 l2 center-align">
-					<img class="objectives-icon" src="img/paper-presentation.svg">
-					<p class="objectives-text">Technical paper</p>
+				<div class="col s12 l8">
+					<div class="row">
+						<div class="col s12 list-image-container owl-carousel owl-theme" style="position: relative;">
+							<script class="list-image-template" type="text/template">									
+									<img src="{{.}}" class="list-image image-rounded z-depth-1">
+							</script>
+						</div>
+						<div class="col s12 list-description-container">
+							<script class="list-description-template" type="text/template">
+								<p class="list-title">
+									{{name}}
+								</p>
+								<div class="col s12 no-padding event-features">
+									<div class="event-property">
+										<i class="material-icons">account_circle</i>{{person}}
+									</div>
+									<div class="event-property">
+										<i class="material-icons">event</i>{{date}}
+									</div>
+									<div class="event-property">
+										<i class="material-icons">place</i>{{place}}
+									</div>
+								</div>
+								<p style="text-align: justify;">
+									{{{description}}}
+								</p>
+							</script>
+						</div>
+					</div>
+				</div> <!-- .events-content -->
+				<div class="col s12 l4 events-list">
+					<div class="col s12 input-field">
+						<select class="list-category-filter">
+							<option value="all">All</option>
+							<option value="workshop">Workshops</option>
+							<option value="seminar">Seminars</option>
+							<option value="competition">Competitions</option><option value="iv">Industrial Visits</option>
+						</select>
+						<label>Category</label>
+					</div>
+					<div class="col s12">
+						<ul class="list-item-container z-depth-1">
+							<script class="list-item-template" type="text/template">
+								{{#list}}
+								<li class="list-item">{{name}}</li>
+								{{/list}}
+							</script>
+						</ul>
+					</div>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 
+	<div id="about" class="section divider-section red accent-3">
+		<div class="container">
+			<span class="title left white-text">About Us</span>
+			<span class="sub-title left yellow-text text-lighten-3">Overview about this committee.</span>
+			<p class="content text-justify white-text" style="line-height: 1.8rem;">
+				Information Technology Students Association (ITSA) committee is formed by Mr. Pramod Shanbhag for the students. It comprises of members from the IT department.
+				We emphasize on providing students with an out-of-syllabus experience as well as making them aware of the latest technology by organizing various events.
+				We organize atleast 6 technical events and 2 Industrial Visits per academic year. We also organize hands-on workshops so that students can understand the concepts better and implement it as well.
+			</p>
+				
+		</div>
+	</div>
 
 	<div id="team" class="section">
 		<div class="container">
@@ -183,30 +310,38 @@
 		</div>
 	</div>
 
-
-	<div id="about" class="section divider-section red accent-3">
-		<div class="container">
-			<span class="title left white-text">About Us</span>
-			<span class="sub-title left yellow-text text-lighten-3">Overview about this committee.</span>
-			<p class="content text-justify white-text" style="line-height: 1.8rem;">
-				Information Technology Students Association (ITSA) committee is formed by Mr. Pramod Shanbhag for the students. It comprises of members from the IT department.
-				We emphasize on providing students with an out-of-syllabus experience as well as making them aware of the latest technology by organizing various events.
-				We organize atleast 6 technical events and 2 Industrial Visits per academic year. We also organize hands-on workshops so that students can understand the concepts better and implement it as well.
-			</p>
-				
-		</div>
-	</div>
-
-	<div id="committee-logo" class="section" style="padding: 3rem 0;">
+	<div id="contact" class="section divider-section small-section white-text deep-purple custom-color" style="margin-bottom: 0;">
 		<div class="container">
 			<div class="row">
-				<div class="col s6 right-align" style="border-right: 1px solid #9e9e9e;">
-					<a href="#home"><img class="img-responsive" src="img/logo.jpg"></a>
-					<span class="title" style="text-align: right;padding-right: 2.3rem;">ITSA</span>
+				<div class="col s12 l4">
+					<span class="title white-text">Contact Us</span>
+					<span class="sub-title yellow-text text-lighten-4">Have some queries?</span>
+					<p>Tell us the questions you have for us.</p>
 				</div>
-				<div class="col s6 left-align">
-					<a href="http://sfitengg.org"><img class="img-responsive" src="img/logo-sfit.jpg"></a>
-					<span class="title left-align" style="padding-left: 2.8rem;">SFIT</span>
+				<div class="col s12 l8 center-align">
+					<form action="javascript:void(0)" id="contact-form" class="white-form">
+						<div class="row no-margin">
+							<div class="col s12 m6 input-field">
+								<input type="text" name="name" required>
+								<label for="name">Name</label>
+							</div>
+							<div class="col s12 m6 input-field">
+								<input type="email" name="email">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="row no-margin">
+							<div class="col s12 input-field">
+								<textarea class="materialize-textarea" name="message" required></textarea>
+								<label for="message">Message</label>
+							</div>
+						</div>
+						<div class="row no-margin">
+							<div class="col s12 right-align">
+								<button id="submit-btn" type="submit" class="btn waves-effect waves-grey white grey-text text-darken-3">Submit</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -216,7 +351,7 @@
 		<div class="footer-copyright">
 			<div class="container">
 				<div class="left">
-					Copyright reserved.<br>Information Technology Students' Assocation
+					Copyrights reserved.<br>Information Technology Students' Assocation
 				</div>
 				<div class="right">
 					&lt;/&gt; with <i class="material-icons" style="color:#ef5350;font-size: 14px;">favorite</i> by <a href="https://www.instagram.com/htshah/">Het Shah</a>.<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -229,11 +364,7 @@
 		<div class="profiles-template">
 			<div class="item">
 				<div class="profile">
-					<div class="hexagon">
-						<div class="hexTop"></div>
-						<div class="hexBottom">
-						</div>
-					</div>
+					<div class="profile-image z-depth-1"></div>
 					<span class="profile-title"></span>
 					<span class="profile-sub-title"></span>
 				</div>
@@ -247,9 +378,15 @@
 	<script src="js/jquery.smoothscroll.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/materialize.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js" type="text/javascript"></script>
+	<script src="js/dateFormat.min.js"></script>
+	<script src="js/mustache.min.js"></script>
 	<script src="js/modernizr.js"></script>
-	<script src="js/timeline-horizontal.min.js"></script>
-	<script src="js/init.min.js"></script>
+	
+	<!-- Custom list.js lib -->
+	<script src="js/list.js"></script>
+	
+	<script src="js/init.js"></script>
 	
 </body>
 </html>

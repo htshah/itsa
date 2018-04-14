@@ -1,7 +1,13 @@
 $(document).ready(function(){
+
+	$('select').material_select();
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
 	$("html").smoothScroll();
+
+	$("#nav-mobile a").click(function(){
+		$(".side-nav-btn").sideNav("hide");
+	});
 
 	//$('.carousel.carousel-slider').carousel({dist:100});
 	/*setInterval(function() {
@@ -9,8 +15,38 @@ $(document).ready(function(){
 	}, 4500); // every 2 seconds
 	*/
 
+	window.eventList = Object.assign({},List);
+
 	$.ajax({
-		url:"assets/team.min.json",
+		type:"GET",
+		url:'assets/events.json',
+		success:function(list){
+			eventList.init('#events',_.orderBy(list,['date'],['desc']));
+		}
+	});
+	$('#events .list-image-container').owlCarousel({
+	    loop:false,
+	    margin:20,
+	    nav:true,
+	    lazyLoad:true,
+	    navText:['&lt;','&gt;'],
+	    dots:true,
+	    items:1,
+	    responsive:{
+	        0:{
+	            items:1,
+	        },
+	        600:{
+	            items:1,
+	        },
+	        992:{
+	            items:1,
+	        }
+	    }
+	});
+
+	$.ajax({
+		url:"assets/team.json",
 		type:"GET",
 		success:function(data){
 			var container = $("#team .owl-carousel");
@@ -18,48 +54,56 @@ $(document).ready(function(){
 				var template = $(".templates .profiles-template .item").clone();
 				template.find(".profile-title").html(profile['name']);
 				template.find(".profile-sub-title").html(profile['title']);
-				template.find(".profile .hexagon").css('background-image',"url('"+profile['img']+"')");
+				template.find(".profile .profile-image").css('background-image',"url('"+profile['img']+"')");
 				container.append(template);
 			});			
 			container.owlCarousel({
 			    loop:false,
-			    margin:20,
+			    margin:15,
 			    nav:true,
-			    navText:['&lt;','&gt;'],
 			    dots:false,
+			    navText:['&lt;','&gt;'],
 			    responsive:{
 			        0:{
-			            items:1
+			            items:1,
+			            slideBy:1
 			        },
 			        600:{
-			            items:2
+			            items:2,
+			            slideBy:2
 			        },
 			        992:{
-			            items:3
+			            items:3,
+			            slideBy:3
 			        }
 			    }
 			})
 		}
 	});
 
-	/*$.ajax({
-		url:'assets/team.json',
-		type:'GET',
-		success:function(data){
-			var container = $("#team .team-container");
+	$("#submit-btn").click(function(){
+		$(this).attr("disabled","disabled");
 
-			$.each(data,function(i,profile){
-				if(i%4==0){
-					container.append($("<div class='row'>"));
+		$.ajax({
+			type:"GET",
+			url:"email/send-email.php",
+			data:$("#contact-form").serializeArray(),
+			success:function(data){
+				data = $.parseJSON(data);
+				if(data.success == 0){
+					Materialize.toast($('<span>').addClass('red white-text').html(data.error),4000);
+				}else{
+					Materialize.toast("Your query has been recorded.:)",4000);
 				}
-				var template = $(".templates .profile-card").clone();
+				$("#submit-btn").removeAttr("disabled");
 				
-				template.find(".card-title").html(profile['name']);
-				template.find("p").html(profile['title']);
-				template.find(".card-image img").attr("src",profile['img']);
+				$("#contact-form input").val("");
+				$("#contact-form textarea").html("");
 
-				container.find(".row").last().append(template);
-			});
-		}
-	});*/
+			},
+			error:function(){
+				$("#submit-btn").removeAttr("disabled");
+			}
+		});
+	});
 });

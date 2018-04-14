@@ -70,7 +70,7 @@ span{font-size: inherit;font-family: inherit;}
 
 .divider-section.small-section{
   min-height: 250px;
-  padding: 4% 0 0 0;
+  padding: 4% 0 1% 0;
 }
 
 .divider-section .title{
@@ -396,6 +396,16 @@ nav ul:not(.side-nav) a:hover,nav ul:not(.side-nav) a.active{
 * Profile section styling
 *
 **/
+.profile .profile-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+}
 .profile .profile-title{
   font-size: 1.3rem;
   font-weight: bold;
