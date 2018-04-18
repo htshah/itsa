@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.container{
+			width: 200px;
+			height: 1000px;
+			perspective: 200px;
+			margin: 200px 300px;
+		}
+		.slider{
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+		}
+
+		.slider .slide{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+			line-height: 100px;
+			font-size: 4rem;
+			color: #fff;
+		}
+
+		.slider .slide:nth-child(1){transform: rotateY(0deg) translateZ(275px);background-color: rgba(255,0,0,0.5)}
+		.slider .slide:nth-child(2){transform: rotateY(40deg) translateZ(275px);background-color: rgba(254,253,0,0.5)}
+		.slider .slide:nth-child(3){transform: rotateY(80deg) translateZ(275px);background-color: rgba(255,100,0,0.5)}
+		.slider .slide:nth-child(4){transform: rotateY(120deg) translateZ(275px);background-color: rgba(100,200,255,0.5)}
+		.slider .slide:nth-child(5){transform: rotateY(160deg) translateZ(275px);background-color: rgba(0,200,255,0.5)}
+		.slider .slide:nth-child(6){transform: rotateY(200deg) translateZ(275px);background-color: rgba(200,0,255,0.5)}
+		.slider .slide:nth-child(7){transform: rotateY(240deg) translateZ(275px);background-color: rgba(30,30,30,0.5)}
+		.slider .slide:nth-child(8){transform: rotateY(280deg) translateZ(275px);background-color: rgba(80,80,80,0.5)}
+		.slider .slide:nth-child(9){transform: rotateY(320deg) translateZ(275px);background-color: rgba(90,90,90,0.5)}
+
+		.slider:hover{
+			transition: all 5s;
+			transform: rotateY(360deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="slider">
+			<div class="slide">1</div>
+			<div class="slide">2</div>
+			<div class="slide">3</div>
+			<div class="slide">4</div>
+			<div class="slide">5</div>
+			<div class="slide">6</div>
+			<div class="slide">7</div>
+			<div class="slide">8</div>
+			<div class="slide">9</div>
+		</div>
+	</div>
+</body>
+</html>

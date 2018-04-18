@@ -125,47 +125,6 @@
 		}
 	</style>
 	
-	<style>
-		#red-perspective{
-			width:100px;
-			height:100px;
-			margin:0 auto;
-			border:1px solid #9e9e9e;
-			perspective:300px;
-		}
-		#red-perspective .box{
-			width:100%;
-			height:100%;
-			background-color:red;
-			transform: rotateY(50deg);
-		}
-		
-		#card-flip{
-			width: 100px;
-  			height: 200px;	
-			transition:transform 1s;
-			margin:0 auto;
-			position:relative;
-		}
-		#card-flip figure{
-			margin: 0;
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			backface-visibility: hidden;
-		}
-		#card-flip .front {
-			background: red;
-		}
-		#card-flip .back {
-			background: blue;
-			transform: rotateY( 180deg );
-		}
-		#card-flip:hover {
-			transform: rotateY( 180deg );
-		}
-	</style>
 	<style type="text/css">
 		.text-shadow{
 			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -202,6 +161,14 @@
 
 		.custom-font{
 			font-family: 'Neoteric';
+		}
+
+		.scroll-up-btn{
+			position: fixed;
+			bottom: 20px;
+			right: 50px;
+			transition: all 3s;
+			display: none;
 		}
 	</style>
 </head>
@@ -340,32 +307,40 @@
 		</div>
 	</div>
 	
-	<div id="transformation-3d" class="section">
+	<div id="perspective" class="section">
 		<div class="container">
-			<span class="title left">3D Transformation - Perspective</span>
+			<span class="title left">3D Transformation - <a href="css3d/perspective.html">Perspective</a></span>
 			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
-			<div class="row">
-				<div class="col s12">
-					<div id="red-perspective">
-						<div class="box"></div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
-	
-	<div id="transformation-card-flip" class="section">
+	<div id="card-flip" class="section">
 		<div class="container">
-			<span class="title left">3D Transformation - Card Flip</span>
+			<span class="title left">3D Transformation - <a href="css3d/card-flip.html">card-flip</a></span>
 			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
-			<div class="row">
-				<div class="col s12">
-					<div id="card-flip">
-						<figure class="front"></figure>
-						<figure class="back"></figure>
-					</div>
-				</div>
-			</div>
+		</div>
+	</div>
+	<div id="cube" class="section">
+		<div class="container">
+			<span class="title left">3D Transformation - <a href="css3d/cube.html">cube</a></span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
+		</div>
+	</div>
+	<div id="prism" class="section">
+		<div class="container">
+			<span class="title left">3D Transformation - <a href="css3d/prism.html">prism</a></span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
+		</div>
+	</div>
+	<div id="prism" class="section">
+		<div class="container">
+			<span class="title left">3D Transformation - <a href="css3d/prism.html">prism</a></span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
+		</div>
+	</div>
+	<div id="carousel" class="section">
+		<div class="container">
+			<span class="title left">3D Transformation - <a href="css3d/carousel.html">carousel</a></span>
+			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
 		</div>
 	</div>
 	<div id="text-shadow" class="section">
@@ -438,7 +413,7 @@
 				<form id="my-form" onsubmit="return false;">
 					<div class="row">
 						<div class="col s6 input-field">
-							<input type="text" name="fname" placeholder="First name" required title="Provide your first name" autofocus/>
+							<input type="text" name="fname" placeholder="First name" required title="Provide your first name"/>
 						</div>
 						<div class="col s6 input-field">
 							<input type="text" name="lname" placeholder="Last name" required title="Provide your last name"/>
@@ -510,6 +485,7 @@
 		</div>
 	</div>
 	
+	<a class="scroll-up-btn btn-floating btn-large waves-effect waves-light red"><i class="material-icons">keyboard_arrow_up</i></a>
 
 
 	<footer class="page-footer grey darken-4" style="padding-top: 0;">
@@ -560,6 +536,15 @@
 					Materialize.toast("Error: "+data['message'],3000);
 				}
 			});
+		});
+
+		$(window).scroll(function() {
+			if ($(this).scrollTop()) {
+				console.log("yes");
+				$('.scroll-up-btn').css({"display":"block"});
+			} else {
+				$('.scroll-up-btn').css({"display":"none"});
+			}
 		});
 	  });
 	</script>
