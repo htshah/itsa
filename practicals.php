@@ -331,12 +331,6 @@
 			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
 		</div>
 	</div>
-	<div id="prism" class="section">
-		<div class="container">
-			<span class="title left">3D Transformation - <a href="css3d/prism.html">prism</a></span>
-			<span class="sub-title left ">A demo on CSS3 3D Transformation</span>
-		</div>
-	</div>
 	<div id="carousel" class="section">
 		<div class="container">
 			<span class="title left">3D Transformation - <a href="css3d/carousel.html">carousel</a></span>
