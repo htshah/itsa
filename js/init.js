@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
 	$('select').material_select();
+	$('.collapsible').collapsible();
 	$('.button-collapse').sideNav();
 	$('.parallax').parallax();
 	$("html").smoothScroll();
@@ -14,6 +15,22 @@ $(document).ready(function(){
 		$('.carousel').carousel('next');
 	}, 4500); // every 2 seconds
 	*/
+
+	$.ajax({
+		url:"assets/slider.json",
+		type:"GET",
+		success:function(data){
+			$("#home-slider").html(Mustache.render($("#home-slider-template").html(),{item:data}))
+				.owlCarousel({
+					loop:true,
+				    nav:false,
+				    lazyLoad:true,
+				    dots:true,
+				    items:1,
+				    autoplay:true,
+				});
+		}
+	})
 
 	window.eventList = Object.assign({},List);
 
@@ -91,7 +108,7 @@ $(document).ready(function(){
 			success:function(data){
 				data = $.parseJSON(data);
 				if(data.success == 0){
-					Materialize.toast($('<span>').addClass('red white-text').html(data.error),4000);
+					Materialize.toast(data.message,15000,'red white-text');
 				}else{
 					Materialize.toast("Your query has been recorded.:)",4000);
 				}

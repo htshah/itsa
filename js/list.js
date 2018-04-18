@@ -57,8 +57,6 @@ var List={
 			//Get first list element if no item is selected
 			var item = this.renderItem?_.filter(this.list,["name",this.currItem])[0]:this.list[0];
 			//=====Preprocessing======
-			item.person = typeof item.person==="array"?item.person.join(", "):item.person;
-				
 			if(typeof item.date === "object"){
 				item.date = _.map(item.date,function(date){
 					return DateFormat.format.date(new Date(date),"D MMM-yy");

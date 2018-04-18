@@ -41,7 +41,7 @@ span{font-size: inherit;font-family: inherit;}
 }
 
 
-.section .title{
+.section .title,.section .small-title{
   display: block;
   text-align: left;
   color:#424242;
@@ -51,6 +51,12 @@ span{font-size: inherit;font-family: inherit;}
   padding: 8px 0;
   width: 100%;
   line-height: 2.25rem;
+}
+
+.section .small-title{
+  font-size: 1.1rem;
+  line-height: 1rem;
+  padding: 4px 0px;
 }
 .section .sub-title{
   text-align: left;
@@ -265,14 +271,13 @@ nav ul:not(.side-nav) a:hover,nav ul:not(.side-nav) a.active{
 **/
 .splash{
   width: 100%;
-  min-height:500px;
   overflow: hidden;
 
-  background: #f44336;
+  /*background: #f44336;
   background: -moz-linear-gradient(-45deg, #f44336 0%, #f50057 99%);
   background: -webkit-linear-gradient(-45deg, #f44336 0%,#f50057 99%);
   background: linear-gradient(135deg, #f44336 0%,#f50057 99%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44336', endColorstr='#f50057',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44336', endColorstr='#f50057',GradientType=1 );*/
 }
 .splash .splash-title{
   font-size: 13rem;

@@ -2,7 +2,7 @@
 	//Check for empty values
 	foreach($_GET as $key=>$value){
 		if(empty($value))
-			die(["success"=>0,"message"=>"$key not provided"]);
+			die(json_encode(["success"=>0,"message"=>"$key not provided"]));
 	}
 	require 'email.php';
 	//Set who the message is to be sent from

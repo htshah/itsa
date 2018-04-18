@@ -1,9 +1,3 @@
-<?php
-	/*$eventsFile = file_get_contents(__DIR__.'\\assets\\events.json');*/
-	$eventsFile = file_get_contents(__DIR__.'/assets/events.min.json');
-	$events = json_decode($eventsFile,true);
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +16,7 @@
 	<link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.carousel.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/owl.theme.green.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/marquee-prefixed.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<!-- <link href="css/hexagon-box.min.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
 
@@ -142,6 +137,9 @@
 		    margin-right: 5px;
 		    color: #4c4c4c;
 		}
+		#events .event-property.event-persons .event-person:not(:first-of-type):before{
+			content:", ";
+		}
 	</style>
 	<style type="text/css">
 		/* label color */
@@ -172,12 +170,53 @@
 			color: #fff !important;
 		}
 	</style>
+	<style type="text/css">
+		#home-slider .owl-item{
+			height: 30rem;
+			max-height: 450px;
+			overflow-y: hidden;
+		}
+
+		#home-slider .owl-dots{
+			position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		}
+
+		#home-slider .item{
+		    height: 100%;
+		    position: relative;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		}
+		.owl-carousel .text-overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.5);
+		}
+
+		.owl-carousel .owl-text{
+			position: absolute;
+		    color: #fff;
+		    font-size: 2rem;
+		    font-weight: 300;
+		    bottom: 10%;
+		    left: 4%;
+		    max-width: 400px; 
+		    border: 3px solid #fff;
+		    padding: 10px 20px;
+		}
+	</style>
 </head>
 <body>
 	<div id="home" class="navbar-wrapper">
 		<nav class="white" role="navigation">
 			<div class="nav-wrapper container">
-				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text"><i class="material-icons">menu</i></a>
+				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text" style="margin-left: 0;"><i class="material-icons">menu</i></a>
 				<a id="logo-container" href="#" class="brand-logo-text">
 					<img class="nav-logo" src="img/logo.jpg"/> ITSA
 				</a>
@@ -187,6 +226,7 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<li><a href="#faq">FAQ</a></li>
 				</ul>
 
 				<ul id="nav-mobile" class="left side-nav">
@@ -195,23 +235,33 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<li><a href="#faq">FAQ</a></li>
 				</ul>
 			</div>
 		</nav>
 	</div>
 
-	<div class="splash">
+	<div id="home-slider" class="splash owl-carousel owl-theme">
+		<script id="home-slider-template" type="text/template">
+			{{#item}}
+			<div class="item" style="position: relative;background-image: url('{{image}}')">
+				{{#text}}
+					<div class="text-overlay"></div>
+					<span class="owl-text">{{.}}</span>
+				{{/text}}
+			</div>
+			{{/item}}
+		</script>
+	</div>
+
+	<div id="notice" class="no-margin section divider-section deep-purple custom-color white-text" >
 		<div class="container">
-			<div class="row">
-				<div class="col s12 center-align hide-on-large-only" style="padding-top: 8%;">
-					<img src="img/team-2.png">
+			<div class="row no-margin">
+				<div class="col s12 m2 l1">
+					<span class="small-title white-text">Updates</span>
 				</div>
-				<div class="col s12 l4" style="padding-top: 8%;">
-					<div class="splash-title">Hey!</div>
-					<p class="splash-text">Welcome to Information Technology Students' Association.</p>
-				</div>
-				<div class="col l8 right-align hide-on-med-and-down" style="padding-top: 8%;">
-					<img src="img/team-2.png">
+				<div class="col s12 m10 l11">
+					<div class="marquee" data-marquee="This is a notice"></div>
 				</div>
 			</div>
 		</div>
@@ -239,8 +289,18 @@
 									{{name}}
 								</p>
 								<div class="col s12 no-padding event-features">
-									<div class="event-property">
-										<i class="material-icons">account_circle</i>{{person}}
+
+									<div class="event-property event-persons">
+										<i class="material-icons">account_circle</i>
+										{{#person}}
+											<span class="event-person">
+												{{#link}}
+													<a href="{{.}}" target="_blank" title="View biodata">
+												{{/link}}
+												{{name}}
+												{{#link}}</a>{{/link}}
+											</span>
+										{{/person}}
 									</div>
 									<div class="event-property">
 										<i class="material-icons">event</i>{{date}}
@@ -248,6 +308,16 @@
 									<div class="event-property">
 										<i class="material-icons">place</i>{{place}}
 									</div>
+									{{#feedback_link}}
+									<div class="event-property">
+										<i class="material-icons">comment</i><a href="{{.}}" target="_blank">Give feedback</a>
+									</div>
+									{{/feedback_link}}
+									{{#report_link}}
+									<div class="event-property">
+										<i class="material-icons">library_books</i><a href="{{.}}" target="_blank">View Report</a>
+									</div>
+									{{/report_link}}
 								</div>
 								<p style="text-align: justify;">
 									{{{description}}}
@@ -343,6 +413,33 @@
 						</div>
 					</form>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="faq" class="section">
+		<div class="container">
+
+			<div class="title">FAQ's</div>
+			<div class="sub-title">Frequently Asked Questions</div>
+			<div class="row">
+				<div class="col s12">
+					<ul class="collapsible popout" data-collapsible="accordion">
+						<li>
+							<div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+							<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+						</li>
+						<li>
+							<div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+							<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+						</li>
+						<li>
+							<div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+							<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+						</li>
+					</ul>
+				</div>
+				
 			</div>
 		</div>
 	</div>

@@ -1,7 +1,10 @@
 [
 	{
 		"name":"Python Workshop",
-		"person":["Mr.Nirantak Singh Raghav","Mr.Pravin Pandey"],
+		"person":[
+			{"name":"Mr.Nirantak Singh Raghav","link":"denmo.html"},
+			{"name":"Mr.Pravin Pandey","link":""}
+		],
 		"date":["2017-08-09"],
 		"image":["img/events/python.jpg","img/events/python.jpg"],
 		"place":"SFIT",
@@ -12,7 +15,9 @@
 	},
 	{
 		"name":"Workshop on writing technical paper",
-		"person":["Mrs.Prachi Raut"],
+		"person":[
+			{"name":"Mrs.Prachi Raut","link":""}
+		],
 		"date":["2017-09-13"],
 		"image":["img/material-scenery.jpg"],
 		"place":"SFIT",
@@ -23,7 +28,9 @@
 	},
 	{
 		"name":"Workshop on LaTeX",
-		"person":["Mrs.Amrita Mathur"],
+		"person":[
+			{"name":"Mrs.Amrita Mathur","link":""}
+		],
 		"date":["2017-09-13"],
 		"image":["img/events/latex.jpeg"],
 		"place":"SFIT",
@@ -34,7 +41,9 @@
 	},
 	{
 		"name":"Mosaic'17",
-		"person":["ITSA Team"],
+		"person":[
+			{"name":"ITSA Team","link":""}
+		],
 		"date":["2017-09-16"],
 		"image":["img/material-scenery.jpg"],
 		"place":"SFIT",
@@ -45,7 +54,9 @@
 	},
 	{
 		"name":"Workshop on LyX",
-		"person":["Mrs.Minal Lopez"],
+		"person":[
+			{"name":"Mrs.Minal Lopez","link":""}
+		],
 		"date":["2017-09-19","2017-09-21"],
 		"image":["img/material-scenery.jpg"],
 		"place":"SFIT",
@@ -56,7 +67,9 @@
 	},
 	{
 		"name":"Drupal workshop",
-		"person":["Mrs.Grinal Tuscano"],
+		"person":[
+			{"name":"Mrs.Grinal Tuscano","link":""}
+		],
 		"date":["2017-09-27","2017-09-29"],
 		"image":["img/events/drupal.jpeg"],
 		"place":"SFIT",
@@ -67,7 +80,11 @@
 	},
 	{
 		"name":"Industrial Visit:Chandigarh-Manali",
-		"person":["ITSA Team","Mrs. Nitika Rai","Mr.Kevin D'souza"],
+		"person":[
+			{"name":"ITSA Team","link":""},
+			{"name":"Mrs. Nitika Rai","link":""},
+			{"name":"Mr.Kevin D'souza","link":""}
+		],
 		"date":["2017-12-28","2018-01-05"],
 		"isDateRange":true,
 		"image":["img/events/iv.jpeg","img/events/manali-1.jpg"],
@@ -79,24 +96,28 @@
 	},
 	{
 		"name":"Seminar on Placements",
-		"person":["Mrs.Nazneen Ansari"],
+		"person":[
+			{"name":"Mrs.Nazneen Ansari","link":""}
+		],
 		"date":["2018-03-07"],
 		"image":["img/events/placement.jpeg"],
 		"place":"SFIT",
 		"description":"A seminar on how to clear placements is going to be conducted by Mrs.Nazneen Ansari",
 		"feedback_link":"",
-		"report_link":"",
+		"report_link":"assets/reports/placement-seminar.pdf",
 		"category":"seminar"
 	},
 	{
 		"name":"Workshop on R programming",
-		"person":["Mrs. Mrinmoyee Mukherjee"],
+		"person":[
+			{"name":"Mrs. Mrinmoyee Mukherjee","link":""}
+		],
 		"date":["2018-03-28"],
 		"image":["img/events/r-programming.jpeg"],
 		"place":"SFIT",
 		"description":"A workshop on R programming language which is best for statistical, data analysis and machine learning was conducted by Mrs. Mrinmoyee Mukherjee",
 		"feedback_link":"",
-		"report_link":"",
+		"report_link":"assets/reports/r-programming.pdf",
 		"category":"workshop"
 	}
 
