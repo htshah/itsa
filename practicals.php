@@ -534,11 +534,14 @@
 
 		$(window).scroll(function() {
 			if ($(this).scrollTop()) {
-				console.log("yes");
 				$('.scroll-up-btn').css({"display":"block"});
 			} else {
 				$('.scroll-up-btn').css({"display":"none"});
 			}
+		});
+
+		$(".scroll-up-btn").click(function(){
+			$("html, body").animate({scrollTop:0});
 		});
 	  });
 	</script>
