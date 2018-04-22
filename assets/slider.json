@@ -1,5 +1,11 @@
 [
-	{"image":"img/events/r-programming.jpeg","text":"R-programming workshop"},
-	{"image":"img/events/manali-1.jpg","text":"Industrial Visit to Manali"},
-	{"image":"img/events/python-collage.jpg","text":"Python Workshop"}
+	{"image":"img/events/r-programming-1.jpg","text":"R-programming workshop"},
+	{"image":"img/events/placement-1.jpg","text":"Placement seminar"},
+	{"image":"img/events/iv-1.jpg","text":"Industrial Visit to Manali"},
+	{"image":"img/events/drupal-1.jpg","text":"Drupal Workshop"},
+	{"image":"img/events/lyx-1.jpg","text":"LyX Workshop"},
+	{"image":"img/events/mosaic-4.jpg","text":"Mosaic Events"},
+	{"image":"img/events/latex-1.jpg","text":"LaTeX Workshop"},
+	{"image":"img/events/technical-1.jpg","text":"Technical Paper Writing"},
+	{"image":"img/banners/python.jpg","text":"Python Workshop"}
 ]

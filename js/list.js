@@ -73,7 +73,7 @@ var List={
 			//======== Load images in Owl-carousel ==========
 
 			//Empty carousel first
-			for(i=0;i<=this.$imageContainer.find(".owl-item").length;i++){
+			for(i=0;i<this.$imageContainer.find(".owl-dot").length;i++){
 				this.$imageContainer.trigger("remove.owl.carousel",[i]);
 			}
 

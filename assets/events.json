@@ -2,11 +2,15 @@
 	{
 		"name":"Python Workshop",
 		"person":[
-			{"name":"Mr.Nirantak Singh Raghav","link":"denmo.html"},
+			{"name":"Mr.Nirantak Singh Raghav","link":""},
 			{"name":"Mr.Pravin Pandey","link":""}
 		],
 		"date":["2017-08-09"],
-		"image":["img/events/python.jpg","img/events/python.jpg"],
+		"image":[
+			"img/events/python-1.jpg",
+			"img/events/python-2.jpg",
+			"img/events/python-3.jpg"
+		],
 		"place":"SFIT",
 		"description":"Python workshop on data analytics and Image processing was conducted by <b>Mr.Nirantak Singh Raghav &amp; Mr.Pravin Pandey</b>",
 		"feedback_link":"",
@@ -19,9 +23,13 @@
 			{"name":"Mrs.Prachi Raut","link":""}
 		],
 		"date":["2017-09-13"],
-		"image":["img/material-scenery.jpg"],
+		"image":[
+			"img/events/technical-1.jpg",
+			"img/events/technical-2.jpg",
+			"img/events/technical-3.jpg"
+		],
 		"place":"SFIT",
-		"description":"A workshop on how to write techincal paper was conducted by Mrs.Prachi Raut",
+		"description":"A workshop on how to write technical paper was conducted by Mrs.Prachi Raut",
 		"feedback_link":"",
 		"report_link":"",
 		"category":"workshop"
@@ -32,7 +40,10 @@
 			{"name":"Mrs.Amrita Mathur","link":""}
 		],
 		"date":["2017-09-13"],
-		"image":["img/events/latex.jpeg"],
+		"image":[
+			"img/events/latex-1.jpg",
+			"img/events/latex-2.jpg"
+		],
 		"place":"SFIT",
 		"description":"A workshop on a document prepartion system LaTeX was conducted by Mrs.Amrita Mathur",
 		"feedback_link":"",
@@ -45,7 +56,12 @@
 			{"name":"ITSA Team","link":""}
 		],
 		"date":["2017-09-16"],
-		"image":["img/material-scenery.jpg"],
+		"image":[
+			"img/events/mosaic-1.jpg",
+			"img/events/mosaic-2.jpg",
+			"img/events/mosaic-3.jpg",
+			"img/events/mosaic-4.jpg"
+		],
 		"place":"SFIT",
 		"description":"Two techincal events, Code-A-thon and Logical Minds, were conducted by ITSA committee where students were given various tasks related to hardware and software to compete for the first prize.",
 		"feedback_link":"",
@@ -58,7 +74,10 @@
 			{"name":"Mrs.Minal Lopez","link":""}
 		],
 		"date":["2017-09-19","2017-09-21"],
-		"image":["img/material-scenery.jpg"],
+		"image":[
+			"img/events/lyx-1.jpg",
+			"img/events/lyx-2.jpg"
+		],
 		"place":"SFIT",
 		"description":"A Workshop on LyX was conducted by Mrs.Minal Lopez.LyX is a document processor that encourages an approach to writing based on the structure of your documents (WYSIWYM) and not simply their appearance (WYSIWYG).",
 		"feedback_link":"",
@@ -71,7 +90,11 @@
 			{"name":"Mrs.Grinal Tuscano","link":""}
 		],
 		"date":["2017-09-27","2017-09-29"],
-		"image":["img/events/drupal.jpeg"],
+		"image":[
+			"img/events/drupal-1.jpg",
+			"img/events/drupal-2.jpg",
+			"img/events/drupal-3.jpg"
+		],
 		"place":"SFIT",
 		"description":"Drupal is a free and open source content-management framework written in PHP. A workshop on this framework was conducted by Mrs.Grinal Tuscano",
 		"feedback_link":"",
@@ -87,7 +110,10 @@
 		],
 		"date":["2017-12-28","2018-01-05"],
 		"isDateRange":true,
-		"image":["img/events/iv.jpeg","img/events/manali-1.jpg"],
+		"image":[
+			"img/events/iv-1.jpg",
+			"img/events/iv-2.jpg"
+		],
 		"place":"SFIT",
 		"description":"An Industrial Visit to Chandigarh-Manali was organzied by ITSA committee.",
 		"feedback_link":"",
@@ -100,7 +126,10 @@
 			{"name":"Mrs.Nazneen Ansari","link":""}
 		],
 		"date":["2018-03-07"],
-		"image":["img/events/placement.jpeg"],
+		"image":[
+			"img/events/placement-1.jpg",
+			"img/events/placement-2.jpg"
+		],
 		"place":"SFIT",
 		"description":"A seminar on how to clear placements is going to be conducted by Mrs.Nazneen Ansari",
 		"feedback_link":"",
@@ -113,7 +142,11 @@
 			{"name":"Mrs. Mrinmoyee Mukherjee","link":""}
 		],
 		"date":["2018-03-28"],
-		"image":["img/events/r-programming.jpeg"],
+		"image":[
+			"img/events/r-programming-1.jpg",
+			"img/events/r-programming-2.jpg",
+			"img/events/r-programming-3.jpg"
+		],
 		"place":"SFIT",
 		"description":"A workshop on R programming language which is best for statistical, data analysis and machine learning was conducted by Mrs. Mrinmoyee Mukherjee",
 		"feedback_link":"",
