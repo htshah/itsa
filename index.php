@@ -219,7 +219,7 @@
 				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text" style="margin-left: 0;"><i class="material-icons">menu</i></a>
 				<div id="logo-container" style="float: left;">
 				  	<a href="sfitengg.org" target="_blank" class="brand-logo-text">
-						<img class="nav-logo" src="img/logo-sfit.jpg"> SFIT
+						<img class="nav-logo" src="img/logo-sfit.jpg" style="border-right:1px solid #9e9e9e;">
 					</a>
 					<a href="#" class="brand-logo-text">
 						<img class="nav-logo" src="img/logo.jpg"> ITSA
