@@ -261,7 +261,7 @@
 					<span class="small-title white-text">Updates</span>
 				</div>
 				<div class="col s12 m10 l11">
-					<div class="marquee" data-marquee="This is a notice"></div>
+					<div class="marquee" data-marquee="Apply now to <a href='demo.html'>join</a> the committee."></div>
 				</div>
 			</div>
 		</div>
