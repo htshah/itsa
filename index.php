@@ -85,6 +85,7 @@
 		    float: left;
 		    margin-top: 25px;
 		    margin-right: 12px;
+			padding: 3px;
 		}
 	</style>
 	<style type="text/css">
