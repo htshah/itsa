@@ -217,9 +217,14 @@
 		<nav class="white" role="navigation">
 			<div class="nav-wrapper container">
 				<a href="#" data-activates="nav-mobile" class="side-nav-btn button-collapse primary-text" style="margin-left: 0;"><i class="material-icons">menu</i></a>
-				<a id="logo-container" href="#" class="brand-logo-text">
-					<img class="nav-logo" src="img/logo.jpg"/> ITSA
-				</a>
+				<div id="logo-container" style="float: left;">
+				  	<a href="sfitengg.org" target="_blank" class="brand-logo-text">
+						<img class="nav-logo" src="img/logo-sfit.jpg"> SFIT
+					</a>
+					<a href="#" class="brand-logo-text">
+						<img class="nav-logo" src="img/logo.jpg"> ITSA
+					</a>
+	     			</div>
 				<ul class="right hide-on-med-and-down">
 					<li><a href="#home">Home</a></li>
 					<li><a href="#events">Events</a></li>
