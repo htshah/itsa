@@ -247,7 +247,7 @@
 			<div class="item" style="position: relative;background-image: url('{{image}}')">
 				{{#text}}
 					<div class="text-overlay"></div>
-					<span class="owl-text">{{.}}</span>
+					<span class="owl-text">{{{.}}}</span>
 				{{/text}}
 			</div>
 			{{/item}}
