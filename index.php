@@ -226,7 +226,7 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li><a href="#faq">FAQ</a></li>
+					<!-- <li><a href="#faq">FAQ</a></li> -->
 				</ul>
 
 				<ul id="nav-mobile" class="left side-nav">
@@ -235,7 +235,7 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#team">Team</a></li>
 					<li><a href="#contact">Contact</a></li>
-					<li><a href="#faq">FAQ</a></li>
+					<!-- <li><a href="#faq">FAQ</a></li>  -->
 				</ul>
 			</div>
 		</nav>
@@ -417,7 +417,7 @@
 		</div>
 	</div>
 
-	<div id="faq" class="section">
+	<!-- <div id="faq" class="section">
 		<div class="container">
 
 			<div class="title">FAQ's</div>
@@ -442,7 +442,7 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<footer class="page-footer grey darken-4" style="padding-top: 0;">
 		<div class="footer-copyright">
